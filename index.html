@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, shrink-to-fit=no">
+        <link type="text/css" rel="stylesheet" href="styling.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/sunny/jquery-ui.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+        
+        <title>Jini World</title>
+    </head>
+    
+    <body class="back"> 
+        <div id="container">
+            <ul>
+                <li><a href="#customer_login">Customer</a></li>
+                <li><a href="#staff_login">Reception</a></li>
+            </ul>
+            
+            <div id="customer_login">
+                <form>
+                    <div class="form-group">
+                        <label for="loginID">Login ID :</label>
+                    <input type="text" id="loginID" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="customerPass">Password : </label>
+                    <input type="password" maxlength="15" id="customerPass" class="form-control">
+                    </div>
+                    <button>Login</button>
+                </form>
+            </div>
+            
+            <div id="staff_login">
+                <form >
+                    <div class="form-group">
+                        <label for="operatorID">Reception ID : </label>
+                <input id="operatorID" type="text" class="form-control">
+                    </div>
+                    <div class="form-group">
+                        <label for="staffPass">Password : </label>
+                <input type="password" maxlength="15" id="staffPass" class="form-control">
+                    </div>
+                    <button>Login</button>           
+                </form>
+            </div>
+        </div>
+        
+        
+        <script>
+            $(function(){
+                $("#container").tabs({
+                    event: "mouseover"
+                });
+                $("button").button({
+                    icons:{
+                        secondary: "ui-icon-circle-triangle-e"
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>
